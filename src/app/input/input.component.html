@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="md-form">
+    <input mdbInputDirective type="text"
+           name="text"
+           [(ngModel)]="username"
+           id="username"
+           class="form-control">
+    <label for="username" class="">Username</label>
+    <p class="text-left mt-3">Username: {{ username }}</p>
+  </div>
+  <div class="text-left">
+    <button
+      mdbBtn
+      type="button"
+      color="mdb-color"
+      class="waves-light"
+      [disabled]="username === ''"
+      (click)="resetUsername()"
+      mdbWavesEffect>Reset</button>
+  </div>
+</div>
